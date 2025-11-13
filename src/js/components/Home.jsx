@@ -6,7 +6,7 @@ const Home = () => {
 
 	const addTask = (e) => {
 		if (e.key === "Enter" && task.trim() !== "") {
-			setList([...list, task]);
+			setList([...list, task.trim()]);
 			setTask("");
 		}
 	};
@@ -17,7 +17,7 @@ const Home = () => {
 
 	return (
 		<div className="todo-container">
-			<h1 className="title">todos</h1>
+			<h1 className="title">To Do List</h1>
 
 			<input
 				type="text"
@@ -31,7 +31,7 @@ const Home = () => {
 			<ul className="todo-list">
 				{list.length === 0 ? (
 					<li className="todo-item text-muted">
-						No hay tareas, añadir tareas
+						Nothing to do — add a task
 					</li>
 				) : (
 					list.map((item, index) => (
@@ -44,10 +44,11 @@ const Home = () => {
 			</ul>
 
 			<div className="footer-count">
-				{list.length} item left
+				{list.length} item{list.length !== 1 ? "s" : ""} left
 			</div>
 		</div>
 	);
 };
 
 export default Home;
+
