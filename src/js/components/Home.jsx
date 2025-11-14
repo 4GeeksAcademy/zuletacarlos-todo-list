@@ -17,7 +17,7 @@ const Home = () => {
 
 	return (
 		<div className="todo-container">
-			<h1 className="title">To Do List</h1>
+			<h1 className="title">todos</h1>
 
 			<input
 				type="text"
