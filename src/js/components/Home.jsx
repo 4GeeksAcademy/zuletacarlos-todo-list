@@ -17,12 +17,12 @@ const Home = () => {
 
 	return (
 		<div className="todo-container">
-			<h1 className="title">todos</h1>
+			<h1 className="title">todos </h1>
 
 			<input
 				type="text"
 				className="input-box"
-				placeholder="What needs to be done?"
+				placeholder="What needs to be done? "
 				value={task}
 				onChange={(e) => setTask(e.target.value)}
 				onKeyDown={addTask}
